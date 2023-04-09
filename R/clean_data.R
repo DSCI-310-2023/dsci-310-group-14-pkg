@@ -11,7 +11,7 @@
 #' @examples
 #' #clean_data(df,Year,2010,2019)
 clean_data <- function(data, col, from, to) {
-  #stopifnot(is.data.frame(data))
+  stopifnot(is.data.frame(data))
   if (!is.numeric(from) | !is.numeric(to)) {
     stop("from or to should be of type numeric")
   }
