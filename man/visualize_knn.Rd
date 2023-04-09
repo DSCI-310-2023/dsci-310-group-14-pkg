@@ -4,10 +4,10 @@
 \alias{visualize_knn}
 \title{Visualizes a knn K selector graph using accuracy and K dataframe}
 \usage{
-visualize_knn(data, x, y, title)
+visualize_knn(df, x, y, title)
 }
 \arguments{
-\item{data}{Specified dataframe}
+\item{df}{Specified dataframe}
 
 \item{x}{Specified K variable}
 

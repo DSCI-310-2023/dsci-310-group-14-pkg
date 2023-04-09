@@ -18,18 +18,18 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of NBASTARS is assist with the machine learning task of predicting NBA Allstars using the NBA allstars dataset.
+The goal of NBASTARS package is to assist with the machine learning task of predicting NBA All stars using the NBA all stars data set from kaggle.
 
 ## Installation
 
 You can install the development version of NBASTARS from [GitHub](https://github.com/DSCI-310/dsci-310-group-14-pkg) with:
 
-``` r
+``` {r}
 # install.packages("devtools")
 devtools::install_github("DSCI-310/dsci-310-group-14-pkg")
 ```
 
-## Example
+## Examples
 
 This is a basic example which shows you how to use the select_to_from function which filters a specified variable using a range:
 
@@ -37,10 +37,10 @@ This is a basic example which shows you how to use the select_to_from function w
 library(NBASTARS)
 ## basic example code
 selected <- select_to_from(mtcars,mpg,21,22.8)
-head(cleaned)
+head(selected)
 ```
 
-This is a basic example which shows you how to use the proportion function which summarize the specified variable and returns a percentage proportion:
+This is a basic example which shows you how to use the proportion function which summarizes the specified variable and returns a percentage proportion:
 
 ```{r prop}
 ## basic example code
@@ -53,16 +53,18 @@ This is a basic example to use the split data function which splits the dataset 
 ## basic example code
 split_data(mtcars,0.7,"vs")
 head(data_testing)
-head(data_traing)
+head(data_training)
 ```
 
-You can also embed plots, for example:
+Here is a quick example of using the visualize_knn function which shows us a elbow graph for K selection when using KNN prediction models:
 
-```{r k selector, echo = FALSE}
+```{r k selector}
 K <- c(1,2,4,5,10,18,25)
 accuracy <- c(0.2,0.4,0.6,0.7,0.4,0.2,0.3)
 df <- data.frame(K,accuracy)
 visualize_knn(df,K,accuracy,"example selector")
 ```
 
-In that case, don't forget to commit and push the resulting figure files, so they display on GitHub and CRAN.
+
+
+
