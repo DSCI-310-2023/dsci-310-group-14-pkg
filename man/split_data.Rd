@@ -2,7 +2,7 @@
 % Please edit documentation in R/split_data.R
 \name{split_data}
 \alias{split_data}
-\title{Splits dataset into a training and testing dataset and writes it to a CSV}
+\title{Splits dataset into a training and testing dataset and saves it into 2 global variable}
 \usage{
 split_data(data, proportion, specified_strata)
 }
@@ -14,11 +14,11 @@ split_data(data, proportion, specified_strata)
 \item{specified_strata}{Specified variable that you are prediciting for}
 }
 \value{
-function writes final dataframe into two dataframe
+function saves final dataframe into two global variables "data_testing", "data_training"
 }
 \description{
-Splits dataset into a training and testing dataset and writes it to a CSV
+Splits dataset into a training and testing dataset and saves it into 2 global variable
 }
 \examples{
-#split_data(dataset,0.7,"Is_All_Star")
+split_data(mtcars,0.7,"vs")
 }

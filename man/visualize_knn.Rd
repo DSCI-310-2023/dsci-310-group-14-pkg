@@ -2,25 +2,28 @@
 % Please edit documentation in R/visualize_knn.R
 \name{visualize_knn}
 \alias{visualize_knn}
-\title{Visualizes a knn model dataframe}
+\title{Visualizes a knn K selector graph using accuracy and K dataframe}
 \usage{
 visualize_knn(data, x, y, title)
 }
 \arguments{
 \item{data}{Specified dataframe}
 
-\item{x}{Specified x-axis}
+\item{x}{Specified K variable}
 
-\item{y}{Specified y-axis}
+\item{y}{Specified Accuracy variable}
 
 \item{title}{Specified title of knn plot}
 }
 \value{
-Returns a plot using specified dataframe
+Returns a knn k selector plot using specified data
 }
 \description{
-Visualizes a knn model dataframe
+Visualizes a knn K selector graph using accuracy and K dataframe
 }
 \examples{
-#visualization <- visualize_knn(data_fit,x = height,y = weight,title = "Prediction")
+K <- c(1,2,4,5,10,18,25)
+accuracy <- c(0.2,0.4,0.6,0.7,0.4,0.2,0.3)
+df <- data.frame(K,accuracy)
+visualize_knn(df,K,accuracy,"lethimcook")
 }

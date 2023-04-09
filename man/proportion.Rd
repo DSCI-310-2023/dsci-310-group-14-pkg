@@ -12,11 +12,11 @@ proportion(data, column)
 \item{column}{Specified column to apply function on}
 }
 \value{
-A summary dataframe containing proportion of specified column
+A summary dataframe containing proportion of specified column in percentage
 }
 \description{
 Return a proportion of a specified column
 }
 \examples{
-#prop <- proportion(dataframe,Is_All_Star)
+proportion(mtcars,vs)
 }

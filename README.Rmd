@@ -1,0 +1,68 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# NBASTARS
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+The goal of NBASTARS is assist with the machine learning task of predicting NBA Allstars using the NBA allstars dataset.
+
+## Installation
+
+You can install the development version of NBASTARS from [GitHub](https://github.com/DSCI-310/dsci-310-group-14-pkg) with:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("DSCI-310/dsci-310-group-14-pkg")
+```
+
+## Example
+
+This is a basic example which shows you how to use the select_to_from function which filters a specified variable using a range:
+
+```{r select}
+library(NBASTARS)
+## basic example code
+selected <- select_to_from(mtcars,mpg,21,22.8)
+head(cleaned)
+```
+
+This is a basic example which shows you how to use the proportion function which summarize the specified variable and returns a percentage proportion:
+
+```{r prop}
+## basic example code
+proportion(mtcars,vs)
+
+```
+This is a basic example to use the split data function which splits the dataset and saves it into two global variables "data_training" and "data_testing"
+
+```{r split}
+## basic example code
+split_data(mtcars,0.7,"vs")
+head(data_testing)
+head(data_traing)
+```
+
+You can also embed plots, for example:
+
+```{r k selector, echo = FALSE}
+K <- c(1,2,4,5,10,18,25)
+accuracy <- c(0.2,0.4,0.6,0.7,0.4,0.2,0.3)
+df <- data.frame(K,accuracy)
+visualize_knn(df,K,accuracy,"example selector")
+```
+
+In that case, don't forget to commit and push the resulting figure files, so they display on GitHub and CRAN.
