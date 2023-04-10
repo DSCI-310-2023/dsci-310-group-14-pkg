@@ -4,6 +4,9 @@
 # NBASTARS
 
 <!-- badges: start -->
+
+![](https://github.com/DSCI-310/dsci-310-group-14-pkg/actions/workflows/test-coverage.yaml/badge.svg)
+![](https://codecov.io/github/DSCI-310/dsci-310-group-14-pkg/branch/Badge/graph/badge.svg)
 <!-- badges: end -->
 
 The goal of NBASTARS package is to assist with the machine learning task
@@ -18,7 +21,7 @@ You can install the development version of NBASTARS from
 ``` r
 # install.packages("devtools")
 devtools::install_github("DSCI-310/dsci-310-group-14-pkg")
-#> Skipping install of 'NBASTARS' from a github remote, the SHA1 (aa466ac5) has not changed since last install.
+#> Skipping install of 'NBASTARS' from a github remote, the SHA1 (3a4d763b) has not changed since last install.
 #>   Use `force = TRUE` to force installation
 ```
 
@@ -63,19 +66,19 @@ dataset and saves it into two global variables “data_training” and
 ## basic example code
 split_data(mtcars,0.7,"vs")
 head(data_testing)
-#>                mpg cyl  disp  hp drat    wt  qsec vs am gear carb
-#> Mazda RX4 Wag 21.0   6 160.0 110 3.90 2.875 17.02  0  1    4    4
-#> Datsun 710    22.8   4 108.0  93 3.85 2.320 18.61  1  1    4    1
-#> Merc 280C     17.8   6 167.6 123 3.92 3.440 18.90  1  0    4    4
-#> Merc 450SE    16.4   8 275.8 180 3.07 4.070 17.40  0  0    3    3
-#> Merc 450SL    17.3   8 275.8 180 3.07 3.730 17.60  0  0    3    3
-#> Fiat 128      32.4   4  78.7  66 4.08 2.200 19.47  1  1    4    1
+#>                 mpg cyl  disp  hp drat    wt  qsec vs am gear carb
+#> Mazda RX4      21.0   6 160.0 110 3.90 2.620 16.46  0  1    4    4
+#> Hornet 4 Drive 21.4   6 258.0 110 3.08 3.215 19.44  1  0    3    1
+#> Valiant        18.1   6 225.0 105 2.76 3.460 20.22  1  0    3    1
+#> Duster 360     14.3   8 360.0 245 3.21 3.570 15.84  0  0    3    4
+#> Merc 280       19.2   6 167.6 123 3.92 3.440 18.30  1  0    4    4
+#> Merc 280C      17.8   6 167.6 123 3.92 3.440 18.90  1  0    4    4
 head(data_training)
 #>                      mpg cyl  disp  hp drat    wt  qsec vs am gear carb
-#> Mazda RX4           21.0   6 160.0 110 3.90 2.620 16.46  0  1    4    4
+#> Mazda RX4 Wag       21.0   6 160.0 110 3.90 2.875 17.02  0  1    4    4
 #> Hornet Sportabout   18.7   8 360.0 175 3.15 3.440 17.02  0  0    3    2
-#> Duster 360          14.3   8 360.0 245 3.21 3.570 15.84  0  0    3    4
-#> Merc 450SLC         15.2   8 275.8 180 3.07 3.780 18.00  0  0    3    3
+#> Merc 450SE          16.4   8 275.8 180 3.07 4.070 17.40  0  0    3    3
+#> Merc 450SL          17.3   8 275.8 180 3.07 3.730 17.60  0  0    3    3
 #> Cadillac Fleetwood  10.4   8 472.0 205 2.93 5.250 17.98  0  0    3    4
 #> Lincoln Continental 10.4   8 460.0 215 3.00 5.424 17.82  0  0    3    4
 ```
@@ -90,4 +93,4 @@ df <- data.frame(K,accuracy)
 visualize_knn(df,K,accuracy,"example selector")
 ```
 
-<img src="man/figures/README-k selector-1.png" width="100%" />
+<img src="man/figures/README_k selector-1.png" width="100%" />
