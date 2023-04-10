@@ -54,4 +54,4 @@ jobs:
         with:
           file: cover.out
           fail_ci_if_error: true
-        verbose: true
+          verbose: true
