@@ -1,4 +1,3 @@
-
 # sample dataframe
 data <- data.frame(
   c1 = c("a", "b", "c", "c", "c", "b", "b", "b"),
@@ -8,10 +7,10 @@ data <- data.frame(
 
 # testing for data input being a data frame
 test_that("input is not a dataframe", {
-  expect_error(proportion('a', c2))
+  expect_error(proportion("a", c2))
 })
 
-#test that input column exists in data
+# test that input column exists in data
 test_that("proportion() throws error if input column does not exist", {
   expect_error(proportion(data, notacolumn))
 })
@@ -22,10 +21,7 @@ test_that("proportion() returns expected output", {
   expected <- dplyr::tibble(
     c1 = c("a", "b", "c"),
     Counts = c(1, 4, 3),
-    Percent = c(12.5, 50, 37.5))
+    Percent = c(12.5, 50, 37.5)
+  )
   expect_equal(result, expected)
 })
-
-
-
-

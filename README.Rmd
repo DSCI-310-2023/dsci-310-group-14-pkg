@@ -38,7 +38,7 @@ This is a basic example which shows you how to use the select_to_from function w
 ```{r select}
 library(NBASTARS)
 ## basic example code
-selected <- select_to_from(mtcars,mpg,21,22.8)
+selected <- select_to_from(mtcars, mpg, 21, 22.8)
 head(selected)
 ```
 
@@ -46,14 +46,13 @@ This is a basic example which shows you how to use the proportion function which
 
 ```{r prop}
 ## basic example code
-proportion(mtcars,vs)
-
+proportion(mtcars, vs)
 ```
 This is a basic example to use the split data function which splits the dataset and saves it into two global variables "data_training" and "data_testing"
 
 ```{r split}
 ## basic example code
-split_data(mtcars,0.7,"vs")
+split_data(mtcars, 0.7, "vs")
 head(data_testing)
 head(data_training)
 ```
@@ -61,10 +60,10 @@ head(data_training)
 Here is a quick example of using the visualize_knn function which shows us a elbow graph for K selection when using KNN prediction models:
 
 ```{r k selector}
-K <- c(1,2,4,5,10,18,25)
-accuracy <- c(0.2,0.4,0.6,0.7,0.4,0.2,0.3)
-df <- data.frame(K,accuracy)
-visualize_knn(df,K,accuracy,"example selector")
+K <- c(1, 2, 4, 5, 10, 18, 25)
+accuracy <- c(0.2, 0.4, 0.6, 0.7, 0.4, 0.2, 0.3)
+df <- data.frame(K, accuracy)
+visualize_knn(df, K, accuracy, "example selector")
 ```
 
 
