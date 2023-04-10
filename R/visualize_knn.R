@@ -12,7 +12,7 @@
 #' K <- c(1,2,4,5,10,18,25)
 #' accuracy <- c(0.2,0.4,0.6,0.7,0.4,0.2,0.3)
 #' df <- data.frame(K,accuracy)
-#' visualize_knn(df,K,accuracy,"lethimcook")
+#' visualize_knn(df,K,accuracy,"example elbow graph")
 visualize_knn <- function(df, x, y, title) {
   if (!is.data.frame(df)) {
     stop("data should be a data frame")
