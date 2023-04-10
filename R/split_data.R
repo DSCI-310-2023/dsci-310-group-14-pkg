@@ -8,8 +8,8 @@
 #' @export
 #'
 #' @examples
-#' split_data(mtcars,0.7,"vs")
-split_data <- function(data,proportion,specified_strata) {
+#' split_data(mtcars, 0.7, "vs")
+split_data <- function(data, proportion, specified_strata) {
   if (!is.data.frame(data)) {
     stop("data should be a data frame")
   }

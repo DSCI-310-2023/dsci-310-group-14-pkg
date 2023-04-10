@@ -7,10 +7,10 @@
 #' @export
 #'
 #' @examples
-#' proportion(mtcars,vs)
-proportion <- function(data,column) {
+#' proportion(mtcars, vs)
+proportion <- function(data, column) {
   stopifnot(is.data.frame(data))
-  dplyr::group_by(data,{{column}}) %>%
-  dplyr::summarize(Counts = dplyr::n()) %>%
-  dplyr::mutate(Percent = 100*Counts/nrow(data))
+  dplyr::group_by(data, {{ column }}) %>%
+    dplyr::summarize(Counts = dplyr::n()) %>%
+    dplyr::mutate(Percent = 100 * Counts / nrow(data))
 }

@@ -1,4 +1,3 @@
-
 # create a sample dataframe for testing
 df <- data.frame(x = 1:10, y = rep(c("a", "b"), 5))
 
@@ -9,7 +8,7 @@ test_that("split_data() throws an error when data is not a data frame", {
 
 # test for proportion input being numeric
 test_that("split_data() throws an error when proportion is not numeric", {
-  expect_error(split_data(df, 'notatprop', "y"), "proportion should be of type numeric")
+  expect_error(split_data(df, "notatprop", "y"), "proportion should be of type numeric")
 })
 
 # test for strata being of type character
@@ -28,4 +27,3 @@ test_that("split_data() correctly splits the data into training and testing data
   expect_true(all(dplyr::semi_join(data_training, data.frame(df), by = names(data_training)) == data_training))
   expect_true(all(dplyr::semi_join(data_testing, data.frame(df), by = names(data_testing)) == data_testing))
 })
-

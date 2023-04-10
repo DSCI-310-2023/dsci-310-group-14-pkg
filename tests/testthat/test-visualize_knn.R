@@ -1,7 +1,8 @@
-
 # helper data
-data <- data.frame(k = 1:10,
-                   acc = 20:11)
+data <- data.frame(
+  k = 1:10,
+  acc = 20:11
+)
 
 # testing data frame input error
 test_that("data is dataframe", {
@@ -21,12 +22,12 @@ test_that("visualize_knn() output is a ggplot object", {
   expect_true("ggplot" %in% class(plot))
 })
 
-#testing for the correct data being on each axis og ggplot object
+# testing for the correct data being on each axis og ggplot object
 test_that("visualize_knn() output has correct data per axis", {
   plot <- visualize_knn(data, k, acc, "test title")
   expect_equal(ggplot2::ggplot_build(plot)$data[[1]]$x, data$k)
   expect_equal(ggplot2::ggplot_build(plot)$data[[1]]$y, data$acc)
-  })
+})
 
 # test for title being set correctly
 test_that("visualize_knn() output has correct title", {
@@ -34,4 +35,3 @@ test_that("visualize_knn() output has correct title", {
   actual_title <- plot$labels$title
   expect_equal(actual_title, "test title")
 })
-

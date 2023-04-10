@@ -9,11 +9,11 @@
 #' @export
 #'
 #' @examples
-#' select_to_from(mtcars,mpg,21,22.8)
+#' select_to_from(mtcars, mpg, 21, 22.8)
 select_to_from <- function(data, col, from, to) {
   stopifnot(is.data.frame(data))
   if (!is.numeric(from) | !is.numeric(to)) {
     stop("from or to should be of type numeric")
   }
-  data %>% dplyr::filter({{col}} >= from & {{col}} <= to)
+  data %>% dplyr::filter({{ col }} >= from & {{ col }} <= to)
 }

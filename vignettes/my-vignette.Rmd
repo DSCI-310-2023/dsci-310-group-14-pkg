@@ -40,21 +40,21 @@ select_to_from() first requires a data frame. Then you would need to specify a s
 
 For example, we can filter the different cars in mtcars by their miles per gallon from 21 to 22.8.
 ```{r select example}
-select_to_from(mtcars,mpg,21,22.8)
+select_to_from(mtcars, mpg, 21, 22.8)
 ```
 ### 2. proportion()
 proportion() Helps you with basic exploration of categorical variables by summarize categorical data and returning the percentage of the data that falls under each category. proportion() requires you need specify the dataset and the categorical variable in that dataset.
 
 For example, we can check how many cars have v shape engines with the mtcars dataset:
 ```{r prop example}
-proportion(mtcars,vs)
+proportion(mtcars, vs)
 ```
 ### 3. split_data()
 split_data() Helps you split your dataset to into a training and testing dataset in order to help you validate your models. split_data() requires a dataset, a specific split percentage and lastly a specified strata which should be the variable you are prediciting for. The strata will ensure the split ensures both dataset have a similar proportions of the predicting variable.
 
 Below illustrates how to use the function. We specified 0.7 training to testing split and using the v-type engine variable as the strata. We can see the function saved the split dataset into two global variables called "data_training" and "data_testing".
 ```{r split example}
-split_data(mtcars,0.7,"vs")
+split_data(mtcars, 0.7, "vs")
 head(data_training)
 head(data_testing)
 ```
@@ -62,8 +62,8 @@ head(data_testing)
 ### 4. visualize_knn()
 visualize_knn() helps you generate a elbow graph for the purposes of selecting a K value for your knn model. visualize_knn requires you first check the responding accuracy of each K value. We have created a psuedo dataset to illustrate this function's usage.
 ```{r knn example}
-K <- c(1,2,4,5,10,18,25)
-accuracy <- c(0.2,0.4,0.6,0.7,0.4,0.2,0.3)
-df <- data.frame(K,accuracy)
-visualize_knn(df,K,accuracy,"example elbow graph")
+K <- c(1, 2, 4, 5, 10, 18, 25)
+accuracy <- c(0.2, 0.4, 0.6, 0.7, 0.4, 0.2, 0.3)
+df <- data.frame(K, accuracy)
+visualize_knn(df, K, accuracy, "example elbow graph")
 ```
