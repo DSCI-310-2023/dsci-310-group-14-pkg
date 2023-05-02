@@ -71,7 +71,7 @@
     
     
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">NBASTARS</span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://dsci-310.github.io/dsci-310-group-14-pkg/">NBASTARS</a></span><span class="op">)</span></span></code></pre></div>
 <p>This document contains documentation and example on how to use the
 NBASTARS package to assist you in performing data analysis and modelling
 on the NBA players dataset.</p>
@@ -152,21 +152,21 @@ called “data_training” and “data_testing”.</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/split_data.html">split_data</a></span><span class="op">(</span><span class="va">mtcars</span>, <span class="fl">0.7</span>, <span class="st">"vs"</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">data_training</span><span class="op">)</span></span>
-<span><span class="co">#&gt;                      mpg cyl  disp  hp drat    wt  qsec vs am gear carb</span></span>
-<span><span class="co">#&gt; Mazda RX4 Wag       21.0   6 160.0 110 3.90 2.875 17.02  0  1    4    4</span></span>
-<span><span class="co">#&gt; Hornet Sportabout   18.7   8 360.0 175 3.15 3.440 17.02  0  0    3    2</span></span>
-<span><span class="co">#&gt; Merc 450SE          16.4   8 275.8 180 3.07 4.070 17.40  0  0    3    3</span></span>
-<span><span class="co">#&gt; Merc 450SLC         15.2   8 275.8 180 3.07 3.780 18.00  0  0    3    3</span></span>
-<span><span class="co">#&gt; Lincoln Continental 10.4   8 460.0 215 3.00 5.424 17.82  0  0    3    4</span></span>
-<span><span class="co">#&gt; Dodge Challenger    15.5   8 318.0 150 2.76 3.520 16.87  0  0    3    2</span></span>
+<span><span class="co">#&gt;                    mpg cyl  disp  hp drat   wt  qsec vs am gear carb</span></span>
+<span><span class="co">#&gt; Mazda RX4         21.0   6 160.0 110 3.90 2.62 16.46  0  1    4    4</span></span>
+<span><span class="co">#&gt; Hornet Sportabout 18.7   8 360.0 175 3.15 3.44 17.02  0  0    3    2</span></span>
+<span><span class="co">#&gt; Duster 360        14.3   8 360.0 245 3.21 3.57 15.84  0  0    3    4</span></span>
+<span><span class="co">#&gt; Merc 450SE        16.4   8 275.8 180 3.07 4.07 17.40  0  0    3    3</span></span>
+<span><span class="co">#&gt; Merc 450SL        17.3   8 275.8 180 3.07 3.73 17.60  0  0    3    3</span></span>
+<span><span class="co">#&gt; Merc 450SLC       15.2   8 275.8 180 3.07 3.78 18.00  0  0    3    3</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">data_testing</span><span class="op">)</span></span>
-<span><span class="co">#&gt;                 mpg cyl  disp  hp drat    wt  qsec vs am gear carb</span></span>
-<span><span class="co">#&gt; Mazda RX4      21.0   6 160.0 110 3.90 2.620 16.46  0  1    4    4</span></span>
-<span><span class="co">#&gt; Datsun 710     22.8   4 108.0  93 3.85 2.320 18.61  1  1    4    1</span></span>
-<span><span class="co">#&gt; Hornet 4 Drive 21.4   6 258.0 110 3.08 3.215 19.44  1  0    3    1</span></span>
-<span><span class="co">#&gt; Duster 360     14.3   8 360.0 245 3.21 3.570 15.84  0  0    3    4</span></span>
-<span><span class="co">#&gt; Merc 240D      24.4   4 146.7  62 3.69 3.190 20.00  1  0    4    2</span></span>
-<span><span class="co">#&gt; Merc 230       22.8   4 140.8  95 3.92 3.150 22.90  1  0    4    2</span></span></code></pre></div>
+<span><span class="co">#&gt;                    mpg cyl  disp  hp drat    wt  qsec vs am gear carb</span></span>
+<span><span class="co">#&gt; Mazda RX4 Wag     21.0   6 160.0 110 3.90 2.875 17.02  0  1    4    4</span></span>
+<span><span class="co">#&gt; Datsun 710        22.8   4 108.0  93 3.85 2.320 18.61  1  1    4    1</span></span>
+<span><span class="co">#&gt; Valiant           18.1   6 225.0 105 2.76 3.460 20.22  1  0    3    1</span></span>
+<span><span class="co">#&gt; Chrysler Imperial 14.7   8 440.0 230 3.23 5.345 17.42  0  0    3    4</span></span>
+<span><span class="co">#&gt; Toyota Corolla    33.9   4  71.1  65 4.22 1.835 19.90  1  1    4    1</span></span>
+<span><span class="co">#&gt; Toyota Corona     21.5   4 120.1  97 3.70 2.465 20.01  1  0    3    1</span></span></code></pre></div>
 </div>
 <div class="section level3">
 <h3 id="visualize_knn">4. visualize_knn()<a class="anchor" aria-label="anchor" href="#visualize_knn"></a>
@@ -180,7 +180,7 @@ dataset to illustrate this function’s usage.</p>
 <span><span class="va">accuracy</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0.2</span>, <span class="fl">0.4</span>, <span class="fl">0.6</span>, <span class="fl">0.7</span>, <span class="fl">0.4</span>, <span class="fl">0.2</span>, <span class="fl">0.3</span><span class="op">)</span></span>
 <span><span class="va">df</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span><span class="va">K</span>, <span class="va">accuracy</span><span class="op">)</span></span>
 <span><span class="fu"><a href="../reference/visualize_knn.html">visualize_knn</a></span><span class="op">(</span><span class="va">df</span>, <span class="va">K</span>, <span class="va">accuracy</span>, <span class="st">"example elbow graph"</span><span class="op">)</span></span></code></pre></div>
-<p><img src="my-vignette_files/figure-html/knn%20example-1.png" width="700"></p>
+<p><img src="my-vignette_files/figure-html/knn%20example-1.png" width="864"></p>
 </div>
 </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
