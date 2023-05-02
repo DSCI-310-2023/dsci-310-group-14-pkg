@@ -61,7 +61,7 @@ head(data_testing)
 
 ### 4. visualize_knn()
 visualize_knn() helps you generate a elbow graph for the purposes of selecting a K value for your knn model. visualize_knn requires you first check the responding accuracy of each K value. We have created a psuedo dataset to illustrate this function's usage.
-```{r knn example}
+```{r knn example,fig.width=9}
 K <- c(1, 2, 4, 5, 10, 18, 25)
 accuracy <- c(0.2, 0.4, 0.6, 0.7, 0.4, 0.2, 0.3)
 df <- data.frame(K, accuracy)
